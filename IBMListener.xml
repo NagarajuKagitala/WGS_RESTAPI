@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="listenername" value="listenerRAPI"/>
+     <parameter name="updatedlistenername" value="listener1"/>
+     <parameter name="copiedlistenername" value="listener123"/>
+     
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMListener">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteListenerifexist"/>
+        <include name="CreateListener"/>
+        <!--<include name="StartListener"/>-->
+        <include name="ReadListenerData"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="SearchListeners"/>
+        <include name="SearchListenerEvents"/>
+        <include name="ForecUpdateListener"/>
+        <include name="ChangeListener"/>
+        <include name="ChangeListenerCustomProperties"/>
+        <include name="CopyListener"/>
+        <include name="DeleteCopiedListener"/>
+        <include name="DeleteListener"/>              
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

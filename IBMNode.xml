@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="nodename" value="nodeRAPI"/>
+     <parameter name="IP" value="127.0.0.2"/>
+     <parameter name="port" value="9595"/>
+     <parameter name="changednodename" value="mynode1"/>
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMNode">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteNodeifexist"/>
+        <include name="CreateNode"/>
+        <include name="ReadNodeData"/>
+        <include name="SearchNode"/>
+        <include name="DiscoverNowNode"/>
+        <include name="StartAllWMQObjects"/>
+        <include name="StopAllWMQObjects"/>
+        <include name="SearchNodeEvents"/>
+        <include name="ChangeNode"/>
+        <include name="ChangeNodeCustomProperties"/> 
+        <include name="ManageNode"/>
+        <include name="UnmanageNode"/>
+        <include name="DeleteNode"/>
+        <include name="Logout"/>
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>
+
+
+ 

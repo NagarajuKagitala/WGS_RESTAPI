@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="queuename" value="queueRAPI"/>
+     <parameter name="queuetype" value="Local"/>
+     <parameter name="updatedqueuename" value="queue1"/>
+     <parameter name="copiedqueuename" value="queue123"/>
+     
+     <classes>
+      <class name="IBMMQ.IBMQueue">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteifQueueexist"/>
+        <include name="CreateQueue"/>
+        <include name="ReadQueueData"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="SearchQueues"/>
+        <include name="SearchQueueAccountings"/>
+        <include name="SearchQueueEvents"/>
+        <include name="SearchQueueStatistics"/>
+        <include name="ForceUpdateQueue"/>
+        <include name="ChangeQueue"/>
+        <include name="ChangeQueueCustomProperties"/>
+        <include name="CopyQueue"/>
+        <include name="DeleteCopiedQueue"/>
+        <include name="DeleteQueue"/>
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

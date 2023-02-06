@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="comminfoname" value="comminfoRAPI"/>
+     <parameter name="updatedcomminfoname" value="comminfo1"/>
+     <parameter name="copiedcomminfoname" value="comminfo123"/>
+     
+    
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMCommInfo">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteCommInfoifexist"/>
+        <include name="CreateCommInfo"/>
+        <include name="ReadCommInfoData"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="SearchCommInfos"/>
+        <include name="SearchComminfoEvents"/>
+        <include name="ForecUpdateCommInfo"/>
+        <include name="ChangeCommInfoCustomProperties"/>
+        <include name="ChangeCommInfo"/>
+        <include name="CopyCommInfo"/>
+        <include name="DeleteCopiedCommInfo"/>
+        <include name="DeleteCommInfo"/>
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

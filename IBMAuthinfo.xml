@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="Drivers\\chromedriver.exe"/>
+     <parameter name="authinfoname" value="authinfoRAPI"/>
+     <parameter name="authtype" value="CRL(LDAP)"/>
+     <parameter name="connname" value="172.16.31.123(5010)"/>
+     <parameter name="updatedauthinfoname" value="authinfo1"/>
+     <parameter name="copiedauthinfoname" value="authinfo123"/>
+     
+     
+     
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMAuthinfo">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteAuthinfoifexist"/>
+        <include name="CreateAuthinfo"/>
+        <include name="ReadAuthinfoData"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="SearchAuthenticationInfo"/>
+        <include name="SearchAuthInfoEvents"/>
+        <include name="ForecUpdateAuthinfo"/>
+        <include name="ChangeAuthinfoCustomProperties"/>
+        <include name="ChangeAuthinfo"/>
+        <include name="CopyAuthinfo"/>
+        <include name="DeleteCopiedAuthinfo"/>
+        <include name="DeleteAuthinfo"/>              
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

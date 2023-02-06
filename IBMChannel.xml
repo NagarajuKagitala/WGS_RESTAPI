@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="channelname" value="channelRAPI"/>
+     <parameter name="channeltype" value="Sender"/>
+     <parameter name="connectionname" value="172.16.31.143(5010)"/>
+     <parameter name="transqueuename" value="SYSTEM.CLUSTER.TRANSMIT.QUEUE"/>
+     <parameter name="updatedchannelname" value="channel1"/>
+     <parameter name="copiedchannelname" value="channel123"/>
+    
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMChannel">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteChannelifexist"/>
+        <include name="CreateChannel"/>
+        <include name="ReadChannelData"/>
+        <include name="SearchChannels"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="SearchChannelEvents"/>
+        <include name="SearchChannelStatistics"/>
+        <include name="ForceUpdateChannel"/>
+        <include name="ChangeChannel"/>
+        <include name="ChangeChannelCustomProperties"/>
+        <include name="CopyChannel"/>
+        <include name="DeleteCopiedChannel"/>
+        <include name="DeleteChannel"/>        
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

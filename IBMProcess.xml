@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="processname" value="processRAPI"/>
+     <parameter name="updatedprocessname" value="process1"/>
+     <parameter name="copiedprocessname" value="process123"/>
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMProcess">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteProcessifexist"/>
+        <include name="CreateProcess"/>
+        <include name="ReadProcessData"/>
+        <include name="SearchProcesses"/>
+        <include name="SearchProcessEvents"/>
+        <include name="ForceUpdateProcess"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="ChangeProcess"/>
+        <include name="ChangeProcessCustomProperties"/>
+        <include name="CopyProcess"/>
+        <include name="DeleteCopiedProcess"/>
+        <include name="DeleteProcess"/>
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

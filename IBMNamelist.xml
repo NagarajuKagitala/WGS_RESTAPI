@@ -1,0 +1,47 @@
+ <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="namelistname" value="namelistRAPI"/>
+     <parameter name="updatednamelistname" value="namelist1"/>
+     <parameter name="copiednamelistname" value="namelist123"/>
+     
+    
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMNamelist">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteNamelistifexist"/>
+        <include name="CreateNamelist"/>
+        <include name="ReadNamelistData"/>
+        <include name="SearchNamelists"/>
+        <include name="SearchNamelistEvents"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <include name="ForecUpdateNamelist"/>
+        <include name="ChangeNamelistCustomProperties"/>
+        <include name="ChangeNamelist"/>
+        <include name="CopyNamelist"/>
+        <include name="DeleteCopiedNamelist"/>
+        <include name="DeleteNamelist"/>
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

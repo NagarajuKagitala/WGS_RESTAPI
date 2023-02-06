@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="remoteqmgrRAPI"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="connname" value="127.0.0.1(4050)"/>
+     <parameter name="updatedrqmgrname" value="rq"/>
+     
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMRemoteQmgr">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="DeleteRemoteQueueManagerifexist"/>
+        <include name="CreateRemoteQmgr"/>
+        <include name="ReadRemoteQueueManagerData"/>
+        <include name="SearchRemoteQueueManagers"/>
+        <include name="ChangeRemoteQmngr"/>
+        <include name="DeleteRemoteQueueManager"/>     
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

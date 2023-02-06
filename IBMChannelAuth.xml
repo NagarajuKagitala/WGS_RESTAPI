@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgr"/>
+     <parameter name="channelauthname" value="channelauthRAPI"/>
+     <parameter name="channelauthtype" value="Block User Map"/>
+     
+     
+     
+    <classes>
+      <class name="IBMMQ.IBMChannelAuth">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="SetChannelAuth"/>
+        <include name="ReadChannelAuthData"/>
+        <include name="SearchChannelAuth"/>
+        <include name="SearchChannelAuthEvents"/>
+        <include name="ForceUpdateChannelAuth"/>
+        <include name="ChangeChannelAuthCustomProperties"/>        
+        <include name="Logout"/>
+        
+        
+     </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>

@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RESTAPI">
+ <test name="RESTAPI options">
+    
+     <parameter name="sDriver" value="webdriver.chrome.driver"/>
+     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
+     <parameter name="uname" value="Admin"/>
+     <parameter name="password" value="admin"/>
+     <parameter name="wgsname" value="MQM"/>
+     <parameter name="nodename" value="KITE"/>
+     <parameter name="qmgrname" value="qmgrRAPI"/>
+     <parameter name="connectionID" value="414d5143716d677220202020202020202bac9963220e7701"/> 
+     
+     
+     <classes>
+      <class name="IBMMQ.IBMQmgr">
+       
+       <methods>
+        <include name="Login"/>
+        <include name="CreateQmgr"/>
+        <include name="ReadQmgrData"/>
+        <include name="ReadMQObjectAuthorityRecords"/>
+        <!--<include name="ReadQmgrConnection"/>-->
+        <include name="SearchQmgr"/>
+        <include name="SearchQmgrAccountings"/>
+        <!--<include name="SearchQmgrApplicationStatuses"/>-->
+        <include name="SearchQmgrAuthorityService"/>
+        <include name="SearchQmgrConnections"/>
+        <include name="SearchQmgrEvents"/>
+        <include name="SearchQmgrStatistics"/>
+        <include name="Forceupdateqmgr"/>
+        <include name="DiscoverNowqmgr"/>
+        <include name="ChangeQmgr"/>
+        <include name="ChangeQmgrCustomProperties"/>
+        <include name="PingQmgr"/>
+        <include name="ExecuteShellCommandOnQmgr"/>
+        <include name="StartAllWMQObjects"/>
+        <include name="StopAllWMQObjects"/>
+        <!--<include name="DeleteQmgr"/>-->
+        <include name="Logout"/>
+        
+        
+             
+       </methods>
+       
+       </class>
+     </classes>
+ </test>
+</suite>
