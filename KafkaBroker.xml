@@ -9,31 +9,30 @@
      <parameter name="uname" value="Admin"/>
      <parameter name="password" value="admin"/>
      <parameter name="wgsname" value="MQM"/>
-     <parameter name="nodename" value="KITE"/>
-     <parameter name="qmgrname" value="RC"/>
-     <parameter name="clusterqmgrname" value="RC"/>
-     <parameter name="clustername" value="LCLUSTER"/>
-     <parameter name="channelname" value="TO.RC"/>
-     
-     
+     <parameter name="nodename" value="KAFKA"/>
+     <parameter name="clustername" value="Cluster"/>
+     <parameter name="brokername" value="0"/>
+     <parameter name="brokerID" value="0"/>
     
      
      
+     
+    
      <classes>
-      <class name="IBMMQ.IBMCluster_QMgr">
+      <class name="KAFKA.KafkaBroker">
        
        <methods>
-      <include name="Login"/> 
-        <include name="ReadClusterQmgrData"/>
-        <include name="SearchClusterQmgrs"/>
-        <include name="SearchClusterQmgrEvents"/>
-        <include name="ChangeClusterQmgrCustomProperties"/>
-        <!--<include name="RefreshCluster"/>-->
+        <include name="Login"/>
+        <include name="ReadKafkaBrokerData"/>
+        <include name="SearchKafkaBrokers"/>
+        <include name="SearchKafkaBrokerEvents"/>
+        <include name="ForceUpdatKafkaBroker"/>
+        <include name="ChangeKafkaBroker"/>
+        <include name="ChangeKafkaBrokerCustomProperties"/>
         <include name="Logout"/>
         
         
-             
-       </methods>
+     </methods>
        
        </class>
      </classes>
