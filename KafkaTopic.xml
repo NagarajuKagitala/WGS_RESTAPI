@@ -11,18 +11,22 @@
      <parameter name="wgsname" value="MQM"/>
      <parameter name="nodename" value="KAFKA"/>
      <parameter name="clustername" value="Cluster"/>
-     
-    
-     
+     <parameter name="topicname" value="TopicRAPI"/>
      
      
-    
-     <classes>
+      <classes>
       <class name="KAFKA.KafkaTopic">
        
        <methods>
         <include name="Login"/>
-        
+        <include name="CreateKafkaTopic"/>
+        <include name="ReadKafkaTopicData"/>
+        <include name="SearchKafkaTopics"/>
+        <include name="SearchKafkaTopicEvents"/>
+        <include name="ForceUpdateKafkaTopic"/>
+        <include name="ChangeKafkaTopic"/>
+        <include name="ChangeKafkaTopicCustomProperties"/>
+        <include name="DeleteKafkaTopic"/>
         <include name="Logout"/>
         
         
