@@ -5,27 +5,20 @@
     <parameter name="nodename" value="KAFKA"/>
     <parameter name="password" value="admin"/>
     <parameter name="uname" value="Admin"/>
+    <parameter name="entryprincipal" value="user:admin"/>
     <parameter name="sDriver" value="webdriver.chrome.driver"/>
     <parameter name="clustername" value="Cluster"/>
-    <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
-    <parameter name="topicname" value="TopicRAPI"/>
+    <parameter name="sDriverpath" value="Drivers\chromedriver.exe"/>
+    <parameter name="resourcename" value="ABCD"/>
+    <parameter name="entryhost" value="localhost"/>
     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
     <parameter name="wgsname" value="MQM"/>
     <classes>
-      <class name="KAFKA.KafkaTopic">
+      <class name="KAFKA.KafkaCluster">
         <methods>
-          <include name="Login" invocation-numbers="0"/>
-          <include name="ChangeKafkaTopicCustomProperties" invocation-numbers="0"/>
-          <include name="DeleteKafkaTopic" invocation-numbers="0"/>
-          <include name="SearchKafkaTopics" invocation-numbers="0"/>
-          <include name="Logout"/>
-          <include name="ChangeKafkaTopic" invocation-numbers="0"/>
-          <include name="ForceUpdateKafkaTopic" invocation-numbers="0"/>
-          <include name="CreateKafkaTopic" invocation-numbers="0"/>
-          <include name="ReadKafkaTopicData" invocation-numbers="0"/>
-          <include name="SearchKafkaTopicEvents" invocation-numbers="0"/>
+          <include name="DeleteKafkaClusterACL" invocation-numbers="0"/>
         </methods>
-      </class> <!-- KAFKA.KafkaTopic -->
+      </class> <!-- KAFKA.KafkaCluster -->
     </classes>
   </test> <!-- RESTAPI options(failed) -->
 </suite> <!-- Failed suite [RESTAPI] -->

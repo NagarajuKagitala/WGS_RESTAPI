@@ -4,7 +4,7 @@
  <test name="RESTAPI options">
     
      <parameter name="sDriver" value="webdriver.chrome.driver"/>
-     <parameter name="sDriverpath" value="E:\\ChanduAutomation\\RESTAPI\\Drivers\\chromedriver.exe"/>
+     <parameter name="sDriverpath" value="Drivers\chromedriver.exe"/>
      <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
      <parameter name="uname" value="Admin"/>
      <parameter name="password" value="admin"/>

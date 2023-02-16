@@ -11,22 +11,20 @@
      <parameter name="wgsname" value="MQM"/>
      <parameter name="nodename" value="KAFKA"/>
      <parameter name="clustername" value="Cluster"/>
-     <parameter name="topicname" value="TopicRAPI"/>
+     <parameter name="partitionname" value="ABC-0"/>
      
      
       <classes>
-      <class name="KAFKA.KafkaTopic">
+      <class name="KAFKA.KafkaPartition">
        
        <methods>
         <include name="Login"/>
-        <include name="CreateKafkaTopic"/>
-        <include name="ReadKafkaTopicData"/>
-        <include name="SearchKafkaTopics"/>
-        <include name="SearchKafkaTopicEvents"/>
-        <include name="ForceUpdateKafkaTopic"/>
-        <include name="ChangeKafkaTopic"/>
-        <include name="ChangeKafkaTopicCustomProperties"/>
-        <include name="DeleteKafkaTopic"/>
+        <include name="ReadKafkaPartitionData"/>
+        <include name="SearchKafkaPartitions"/>
+        <include name="SearchKafkaPartitionEvents"/>
+        <include name="ForceUpdateKafkaPartition"/>
+        <include name="ChangeKafkaPartition"/>
+        <include name="ChangeKafkaPartitionCustomProperties"/>
         <include name="Logout"/>
         
         
