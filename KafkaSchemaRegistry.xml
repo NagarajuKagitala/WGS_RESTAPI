@@ -10,21 +10,24 @@
      <parameter name="password" value="admin"/>
      <parameter name="wgsname" value="MQM"/>
      <parameter name="nodename" value="KAFKA"/>
-     <parameter name="clustername" value="Cluster"/>
-     <parameter name="partitionname" value="ABC-0"/>
+     <parameter name="clustername" value="New_Cluster"/>
+     <parameter name="schemaID" value="1"/>
+     <parameter name="url" value="http://172.16.31.19:8081"/>
      
      
       <classes>
-      <class name="KAFKA.KafkaPartition">
+      <class name="KAFKA.KafkaSchemaRegistry">
        
        <methods>
         <include name="Login"/>
-        <include name="ReadKafkaPartitionData"/>
-        <include name="SearchKafkaPartitions"/>
-        <include name="SearchKafkaPartitionEvents"/>
-        <include name="ForceUpdateKafkaPartition"/>
-        <!--<include name="ChangeKafkaPartition"/>-->
-        <include name="ChangeKafkaPartitionCustomProperties"/>
+        <include name="ReadKafkaSchemaRegistryData"/>
+        <include name="ReadKafkaSchemaRegistrySchema"/>
+        <include name="ReadKafkaSchemaRegistrySchemaSubjectVersions"/>
+        <include name="SearchKafkaSchemaRegistries"/>
+        <include name="SearchKafkaSchemaRegistryEvents"/>
+        <include name="ForceUpdateKafkaSchemaRegistry"/>
+        <include name="ChangeKafkaSchemaRegistryCustomProperties"/>
+        <include name="ChangeKafkaSchemaRegistry"/>        
         <include name="Logout"/>
         
         

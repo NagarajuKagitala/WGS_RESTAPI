@@ -5,20 +5,26 @@
     <parameter name="nodename" value="KAFKA"/>
     <parameter name="password" value="admin"/>
     <parameter name="uname" value="Admin"/>
-    <parameter name="entryprincipal" value="user:admin"/>
     <parameter name="sDriver" value="webdriver.chrome.driver"/>
-    <parameter name="clustername" value="Cluster"/>
+    <parameter name="clustername" value="New_Cluster"/>
     <parameter name="sDriverpath" value="Drivers\chromedriver.exe"/>
-    <parameter name="resourcename" value="ABCD"/>
-    <parameter name="entryhost" value="localhost"/>
+    <parameter name="schemaID" value="1"/>
     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
     <parameter name="wgsname" value="MQM"/>
+    <parameter name="url" value="http://172.16.31.19:8081"/>
     <classes>
-      <class name="KAFKA.KafkaCluster">
+      <class name="KAFKA.KafkaSchemaRegistry">
         <methods>
-          <include name="DeleteKafkaClusterACL" invocation-numbers="0"/>
+          <include name="ReadKafkaSchemaRegistryData"/>
+          <include name="ChangeKafkaSchemaRegistry"/>
+          <include name="ReadKafkaSchemaRegistrySchemaSubjectVersions"/>
+          <include name="ChangeKafkaSchemaRegistryCustomProperties"/>
+          <include name="SearchKafkaSchemaRegistries"/>
+          <include name="SearchKafkaSchemaRegistryEvents"/>
+          <include name="ReadKafkaSchemaRegistrySchema"/>
+          <include name="ForceUpdateKafkaSchemaRegistry"/>
         </methods>
-      </class> <!-- KAFKA.KafkaCluster -->
+      </class> <!-- KAFKA.KafkaSchemaRegistry -->
     </classes>
   </test> <!-- RESTAPI options(failed) -->
 </suite> <!-- Failed suite [RESTAPI] -->
