@@ -8,13 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import testrail.TestClass;
-@Listeners(TestClass.class)
-public class KafkaSchemaRegistry 
+public class KafkaKSQL 
 {
 static WebDriver driver;
 	
@@ -79,12 +76,12 @@ static WebDriver driver;
 		Thread.sleep(4000);
 	}
 	
-	@Parameters({"wgsname","nodename","clustername","schregname"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=1)
-	public static void ReadKafkaSchemaRegistryData(String wgsname, String nodename, String clustername, String schregname) throws InterruptedException
+	public static void ReadKafkaKSQLInstanceData(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for read kafka schema registry data
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchReg .arrow")).click();
+		//for read kafka KSQL data
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInst .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -98,7 +95,7 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
@@ -116,25 +113,25 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==200)
 		{
-			System.out.println("Read kafka schema registry data method is success");
+			System.out.println("Read kafka KSQL instance data method is success");
 		}
 		else
 		{
-			System.out.println("Read kafka schema registry data method is unsuccess");
+			System.out.println("Read kafka KSQL instance data method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchReg .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInst .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
 	
-	@Parameters({"nodename","clustername","schregname","schemaID"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=2)
-	public static void ReadKafkaSchemaRegistrySchema(String nodename, String clustername, String schregname, String schemaID) throws InterruptedException
+	public static void ReadKafkaKSQLQueries(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for read kafka schema registry schema
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchRegSchema .arrow")).click();
+		//for read kafka KSQL queries
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstQueries .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -148,11 +145,7 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[4]/td[2]/input")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[4]/td[2]/input")).sendKeys(schemaID);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
@@ -170,25 +163,24 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==200)
 		{
-			System.out.println("Read kafka schema registry schema method is success");
+			System.out.println("Read kafka KSQL queries method is success");
 		}
 		else
 		{
-			System.out.println("Read kafka schema registry schema method is unsuccess");
+			System.out.println("Read kafka KSQL queries method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchRegSchema .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstQueries .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
-	
-	@Parameters({"nodename","clustername","schregname","schemaID"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=3)
-	public static void ReadKafkaSchemaRegistrySchemaSubjectVersions(String nodename, String clustername, String schregname, String schemaID) throws InterruptedException
+	public static void ReadKafkaKSQLStreams(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for read kafka schema registry schema subject versions
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchRegSchemaSubjVers .arrow")).click();
+		//for read kafka KSQL streams
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstStreams .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -202,11 +194,7 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[4]/td[2]/input")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[4]/td[2]/input")).sendKeys(schemaID);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
@@ -224,25 +212,24 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==200)
 		{
-			System.out.println("Read kafka schema registry schema subject versions method is success");
+			System.out.println("Read kafka KSQL streams method is success");
 		}
 		else
 		{
-			System.out.println("Read kafka schema registry schema subject versions method is unsuccess");
+			System.out.println("Read kafka KSQL streams method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-readKafkaSchRegSchemaSubjVers .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstStreams .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
-	
-	@Parameters({"nodename","clustername","schregname"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=4)
-	public static void SearchKafkaSchemaRegistries(String nodename, String clustername, String schregname) throws InterruptedException
+	public static void ReadKafkaKSQLTables(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for search kafka schema registry 
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-searchKafkaSchRegs .arrow")).click();
+		//for read kafka KSQL tables
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstTables .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -256,7 +243,7 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
@@ -274,24 +261,24 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==200)
 		{
-			System.out.println("Search kafka schema registry method is success");
+			System.out.println("Read kafka KSQL tables method is success");
 		}
 		else
 		{
-			System.out.println("Search kafka schema registry method is unsuccess");
+			System.out.println("Read kafka KSQL tables method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-searchKafkaSchRegs .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-readKafkaKsqlInstTables .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
-	@Parameters({"nodename","clustername","schregname"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=5)
-	public static void SearchKafkaSchemaRegistryEvents(String nodename, String clustername, String schregname) throws InterruptedException
+	public static void SearchKafkaKSQLInstances(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for search kafka schema registry events
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-searchKafkaSchRegEvents .arrow")).click();
+		//for search kafka KSQL instances
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-searchKafkaKsqlInsts .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -305,9 +292,8 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
-		
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
 		
@@ -324,24 +310,24 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==200)
 		{
-			System.out.println("Search kafka schema registry events method is success");
+			System.out.println("search kafka KSQL instances method is success");
 		}
 		else
 		{
-			System.out.println("Search kafka schema registry events method is unsuccess");
+			System.out.println("Search kafka KSQL instances method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-searchKafkaSchRegEvents .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-searchKafkaKsqlInsts .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
-	@Parameters({"nodename","clustername","schregname"})
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
 	@Test(priority=6)
-	public static void ForceUpdateKafkaSchemaRegistry(String nodename, String clustername, String schregname) throws InterruptedException
+	public static void SearchKafkaKSQLInstanceEvents(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for force update kafka schema registry 
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-forceUpdateKafkaSchReg .arrow")).click();
+		//for search kafka KSQL instance events
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-searchKafkaKsqlInstEvents .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -355,7 +341,57 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//div[3]/button")).click();
+		Thread.sleep(5000);
+		
+		//for scrolling down
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		WebElement Element1 = driver.findElement(By.xpath("//div[4]/div[2]/div/div/table/tbody/tr/td"));
+		js1.executeScript("arguments[0].scrollIntoView();", Element1);
+		Thread.sleep(5000);
+		
+		//for comparing the result
+		String responsedata=driver.findElement(By.xpath("//div[4]/div[2]/div/div/table/tbody/tr/td")).getText();
+		int responsecode=Integer.parseInt(responsedata);
+		
+		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
+		if(curldata.contains(clustername) && responsecode==200)
+		{
+			System.out.println("search kafka KSQL instance events method is success");
+		}
+		else
+		{
+			System.out.println("Search kafka KSQL instance events method is unsuccess");
+			driver.findElement(By.xpath("fail the testcase")).click();
+		}
+		
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-searchKafkaKsqlInstEvents .arrow")).click();
+		Thread.sleep(5000);
+	}
+	
+	
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
+	@Test(priority=7)
+	public static void ForceUpdateKafkaKSQLInstance(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
+	{
+		//for force update kafka KSQL instance 
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-forceUpdateKafkaKsqlInst .arrow")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//div/div[2]/button")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//td[2]/input")).clear();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//td[2]/input")).sendKeys(nodename);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//tr[2]/td[2]/input")).clear();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//tr[2]/td[2]/input")).sendKeys(clustername);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[3]/button")).click();
 		Thread.sleep(5000);
@@ -373,24 +409,24 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==204)
 		{
-			System.out.println("force update kafka schema registry method is success");
+			System.out.println("force update kafka KSQL instance method is success");
 		}
 		else
 		{
-			System.out.println("force update kafka schema registry method is unsuccess");
+			System.out.println("force update kafka KSQL instance method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-forceUpdateKafkaSchReg .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-forceUpdateKafkaKsqlInst .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
-	@Parameters({"nodename","clustername","schregname"})
-	@Test(priority=7)
-	public static void ChangeKafkaSchemaRegistryCustomProperties(String nodename, String clustername, String schregname) throws InterruptedException
+	@Parameters({"wgsname","nodename","clustername","KSQLname"})
+	@Test(priority=8)
+	public static void ChangeKafkaKSQLInstanceCustomProperties(String wgsname, String nodename, String clustername, String KSQLname) throws InterruptedException
 	{
-		//for change kafka schema registry custom properties
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-changeKafkaSchRegCustomProperties .arrow")).click();
+		//for change kafka KSQL custom properties 
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-changeKafkaKsqlInstCustomProperties .arrow")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div/div[2]/button")).click();
 		Thread.sleep(3000);
@@ -404,7 +440,7 @@ static WebDriver driver;
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
+		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(KSQLname);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//textarea")).clear();
 		Thread.sleep(3000);
@@ -429,80 +465,15 @@ static WebDriver driver;
 		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
 		if(curldata.contains(clustername) && responsecode==204)
 		{
-			System.out.println("Change kafka schema registry custom properties method is success");
+			System.out.println("change kafka KSQL custom properties method is success");
 		}
 		else
 		{
-			System.out.println("change kafka schema registry custom properties method is unsuccess");
+			System.out.println("change kafka KSQL custom properties method is unsuccess");
 			driver.findElement(By.xpath("fail the testcase")).click();
 		}
 		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-changeKafkaSchRegCustomProperties .arrow")).click();
-		Thread.sleep(5000);
-	}
-	
-	@Parameters({"wgsname","nodename","clustername","schregname","url"})
-	@Test(priority=8)
-	public static void ChangeKafkaSchemaRegistry(String wgsname, String nodename, String clustername, String schregname, String url) throws InterruptedException
-	{
-		//for change kafka schema registry 
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-changeKafkaSchReg .arrow")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//div/div[2]/button")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//td[2]/input")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//td[2]/input")).sendKeys(nodename);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[2]/td[2]/input")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[2]/td[2]/input")).sendKeys(clustername);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//tr[3]/td[2]/input")).sendKeys(schregname);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//textarea")).clear();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//textarea")).sendKeys("{\r\n"
-				+ "  \"wgsName\": \""+wgsname+"\",\r\n"
-				+ "  \"nodeName\": \""+nodename+"\",\r\n"
-				+ "  \"clusterName\": \""+clustername+"\",\r\n"
-				+ "  \"schRegName\": \""+schregname+"\",\r\n"
-				+ "  \r\n"
-				+ "  \"general\": {\r\n"
-				+ "    \"url\": \""+url+"\",\r\n"
-				+ "    \"mode\": \"READWRITE\"\r\n"
-				+ "    \r\n"
-				+ "  }\r\n"
-				+ "  \r\n"
-				+ "}");
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//div[3]/button")).click();
-		Thread.sleep(5000);
-		
-		//for scrolling down
-		JavascriptExecutor js1 = (JavascriptExecutor) driver;
-		WebElement Element1 = driver.findElement(By.xpath("//div[4]/div[2]/div/div/table/tbody/tr/td"));
-		js1.executeScript("arguments[0].scrollIntoView();", Element1);
-		Thread.sleep(5000);
-		
-		//for comparing the result
-		String responsedata=driver.findElement(By.xpath("//div[4]/div[2]/div/div/table/tbody/tr/td")).getText();
-		int responsecode=Integer.parseInt(responsedata);
-		
-		String curldata=driver.findElement(By.xpath("//div[2]/pre")).getText();
-		if(curldata.contains(clustername) && responsecode==204)
-		{
-			System.out.println("Change kafka schema registry method is success");
-		}
-		else
-		{
-			System.out.println("change kafka schema registry method is unsuccess");
-			driver.findElement(By.xpath("fail the testcase")).click();
-		}
-		
-		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.schRegs-changeKafkaSchReg .arrow")).click();
+		driver.findElement(By.cssSelector("#operations-kafka\\\\\\.ksqlInsts-changeKafkaKsqlInstCustomProperties .arrow")).click();
 		Thread.sleep(5000);
 	}
 	
@@ -518,5 +489,6 @@ static WebDriver driver;
 			driver.close();
 			
 	 }
+	
 
 }

@@ -11,24 +11,24 @@
      <parameter name="wgsname" value="MQM"/>
      <parameter name="nodename" value="KAFKA"/>
      <parameter name="clustername" value="New_Cluster"/>
-     <parameter name="schregname" value="KAFKA_SCHEMA_REGISTRY"/>
-     <parameter name="schemaID" value="1"/>
-     <parameter name="url" value="http://172.16.31.19:8081"/>
+     <parameter name="KSQLname" value="KAFKA_KSQL"/>
+     
      
      
       <classes>
-      <class name="KAFKA.KafkaSchemaRegistry">
+      <class name="KAFKA.KafkaKSQL">
        
        <methods>
         <include name="Login"/>
-        <include name="ReadKafkaSchemaRegistryData"/>
-        <include name="ReadKafkaSchemaRegistrySchema"/>
-        <include name="ReadKafkaSchemaRegistrySchemaSubjectVersions"/>
-        <include name="SearchKafkaSchemaRegistries"/>
-        <include name="SearchKafkaSchemaRegistryEvents"/>
-        <include name="ForceUpdateKafkaSchemaRegistry"/>
-        <include name="ChangeKafkaSchemaRegistryCustomProperties"/>
-        <include name="ChangeKafkaSchemaRegistry"/>        
+        <include name="ReadKafkaKSQLInstanceData"/>
+        <include name="ReadKafkaKSQLQueries"/>
+        <include name="ReadKafkaKSQLStreams"/>
+        <include name="ReadKafkaKSQLTables"/>
+        <include name="SearchKafkaKSQLInstances"/>
+        <include name="SearchKafkaKSQLInstanceEvents"/>
+        <include name="ForceUpdateKafkaKSQLInstance"/>
+        <include name="ChangeKafkaKSQLInstanceCustomProperties"/> 
+               
         <include name="Logout"/>
         
         
