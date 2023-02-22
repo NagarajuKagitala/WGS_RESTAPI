@@ -11,23 +11,25 @@
      <parameter name="wgsname" value="MQM"/>
      <parameter name="nodename" value="KAFKA"/>
      <parameter name="clustername" value="New_Cluster"/>
-     <parameter name="KSQLname" value="KAFKA_KSQL"/>
+     <parameter name="instancename" value="KAFKA_CONNECTOR"/>
+     <parameter name="connectorname" value="ABC"/>
      
      
      
       <classes>
-      <class name="KAFKA.KafkaKSQL">
+      <class name="KAFKA.KafkaConnects">
        
        <methods>
         <include name="Login"/>
-        <include name="ReadKafkaKSQLInstanceData"/>
-        <include name="ReadKafkaKSQLQueries"/>
-        <include name="ReadKafkaKSQLStreams"/>
-        <include name="ReadKafkaKSQLTables"/>
-        <include name="SearchKafkaKSQLInstances"/>
-        <include name="SearchKafkaKSQLInstanceEvents"/>
-        <include name="ForceUpdateKafkaKSQLInstance"/>
-        <include name="ChangeKafkaKSQLInstanceCustomProperties"/>        
+        <include name="ReadKafkaConnectData"/>
+        <include name="SearchKafkaConnects"/>
+        <include name="SearchKafkaConnectEvents"/>
+        <include name="RestartKafkaConnect"/>
+        <include name="PauseKafkaConnect"/>
+        <include name="ResumeKafkaConnect"/>
+        <include name="RestartKafkaConnectTopic"/>
+        <include name="ForceUpdateKafkaConnect"/>
+        <include name="ChangeKafkaConnectCustomProperties"/>     
         <include name="Logout"/>
         
         

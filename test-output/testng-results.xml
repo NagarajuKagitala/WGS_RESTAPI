@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="10" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-20T14:08:21Z" name="RESTAPI" finished-at="2023-02-20T14:12:06Z" duration-ms="225036">
+  <suite started-at="2023-02-21T11:42:48Z" name="RESTAPI" finished-at="2023-02-21T11:50:12Z" duration-ms="443987">
     <groups>
     </groups>
-    <test started-at="2023-02-20T14:08:21Z" name="RESTAPI options" finished-at="2023-02-20T14:12:06Z" duration-ms="225036">
-      <class name="KAFKA.KafkaSchemaRegistry">
-        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:KAFKA.KafkaSchemaRegistry@1ff4931d]" started-at="2023-02-20T19:38:21Z" name="Login" finished-at="2023-02-20T19:38:59Z" duration-ms="37569" status="PASS">
+    <test started-at="2023-02-21T11:42:48Z" name="RESTAPI options" finished-at="2023-02-21T11:50:12Z" duration-ms="443987">
+      <class name="KAFKA.KafkaKSQL">
+        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:12:48Z" name="Login" finished-at="2023-02-21T17:13:27Z" duration-ms="39315" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ChangeKafkaSchemaRegistry(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:KAFKA.KafkaSchemaRegistry@1ff4931d]" started-at="2023-02-20T19:38:59Z" name="ChangeKafkaSchemaRegistry" finished-at="2023-02-20T19:41:58Z" duration-ms="179367" status="PASS">
+        <test-method signature="ReadKafkaKSQLInstanceData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:13:27Z" name="ReadKafkaKSQLInstanceData" finished-at="2023-02-21T17:14:12Z" duration-ms="44902" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,23 +57,200 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[http://172.16.31.19:8081]]>
+                <![CDATA[KAFKA_KSQL]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeKafkaSchemaRegistry -->
-        <test-method signature="Logout()[pri:9, instance:KAFKA.KafkaSchemaRegistry@1ff4931d]" started-at="2023-02-20T19:41:58Z" name="Logout" finished-at="2023-02-20T19:42:06Z" duration-ms="8056" status="PASS">
+        </test-method> <!-- ReadKafkaKSQLInstanceData -->
+        <test-method signature="ReadKafkaKSQLQueries(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:14:12Z" name="ReadKafkaKSQLQueries" finished-at="2023-02-21T17:14:57Z" duration-ms="45238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadKafkaKSQLQueries -->
+        <test-method signature="ReadKafkaKSQLStreams(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:14:57Z" name="ReadKafkaKSQLStreams" finished-at="2023-02-21T17:15:42Z" duration-ms="44740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadKafkaKSQLStreams -->
+        <test-method signature="ReadKafkaKSQLTables(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:15:42Z" name="ReadKafkaKSQLTables" finished-at="2023-02-21T17:16:27Z" duration-ms="44982" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadKafkaKSQLTables -->
+        <test-method signature="SearchKafkaKSQLInstances(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:16:27Z" name="SearchKafkaKSQLInstances" finished-at="2023-02-21T17:17:13Z" duration-ms="45611" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchKafkaKSQLInstances -->
+        <test-method signature="SearchKafkaKSQLInstanceEvents(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:17:13Z" name="SearchKafkaKSQLInstanceEvents" finished-at="2023-02-21T17:17:56Z" duration-ms="43219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchKafkaKSQLInstanceEvents -->
+        <test-method signature="ForceUpdateKafkaKSQLInstance(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:7, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:17:56Z" name="ForceUpdateKafkaKSQLInstance" finished-at="2023-02-21T17:18:41Z" duration-ms="45267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ForceUpdateKafkaKSQLInstance -->
+        <test-method signature="ChangeKafkaKSQLInstanceCustomProperties(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:18:41Z" name="ChangeKafkaKSQLInstanceCustomProperties" finished-at="2023-02-21T17:20:03Z" duration-ms="82069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MQM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KAFKA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New_Cluster]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[KAFKA_KSQL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeKafkaKSQLInstanceCustomProperties -->
+        <test-method signature="Logout()[pri:9, instance:KAFKA.KafkaKSQL@710f4dc7]" started-at="2023-02-21T17:20:03Z" name="Logout" finished-at="2023-02-21T17:20:12Z" duration-ms="8600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
-      </class> <!-- KAFKA.KafkaSchemaRegistry -->
+      </class> <!-- KAFKA.KafkaKSQL -->
     </test> <!-- RESTAPI options -->
   </suite> <!-- RESTAPI -->
 </testng-results>
