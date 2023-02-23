@@ -15,7 +15,7 @@
      
      
      <classes>
-      <class name="KAFKA.KafkaConnects">
+      <class name="KAFKA.KafkaConnectInstances">
        
        <methods>
         <include name="Login"/>
