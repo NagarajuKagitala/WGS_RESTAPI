@@ -4,28 +4,30 @@
   <test name="RESTAPI options(failed)">
     <parameter name="nodename" value="KAFKA"/>
     <parameter name="password" value="admin"/>
+    <parameter name="instancename" value="KAFKA_CONNECTOR"/>
     <parameter name="uname" value="Admin"/>
     <parameter name="sDriver" value="webdriver.chrome.driver"/>
     <parameter name="clustername" value="New_Cluster"/>
     <parameter name="sDriverpath" value="Drivers\chromedriver.exe"/>
-    <parameter name="KSQLname" value="KAFKA_KSQL"/>
+    <parameter name="connectorname" value="ABC"/>
     <parameter name="URL" value="http://localhost:8019/rest/v1/api-docs?url=/rest/v1/openapi.json"/>
     <parameter name="wgsname" value="MQM"/>
     <classes>
-      <class name="KAFKA.KafkaKSQL">
+      <class name="KAFKA.KafkaConnects">
         <methods>
-          <include name="ChangeKafkaKSQLInstanceCustomProperties" invocation-numbers="0"/>
-          <include name="ReadKafkaKSQLQueries" invocation-numbers="0"/>
-          <include name="ReadKafkaKSQLInstanceData" invocation-numbers="0"/>
-          <include name="SearchKafkaKSQLInstanceEvents" invocation-numbers="0"/>
-          <include name="ForceUpdateKafkaKSQLInstance" invocation-numbers="0"/>
-          <include name="Logout"/>
-          <include name="ReadKafkaKSQLStreams" invocation-numbers="0"/>
-          <include name="ReadKafkaKSQLTables" invocation-numbers="0"/>
+          <include name="RestartKafkaConnect" invocation-numbers="0"/>
+          <include name="PauseKafkaConnect" invocation-numbers="0"/>
+          <include name="ResumeKafkaConnect" invocation-numbers="0"/>
+          <include name="SearchKafkaConnectEvents" invocation-numbers="0"/>
+          <include name="SearchKafkaConnects" invocation-numbers="0"/>
           <include name="Login" invocation-numbers="0"/>
-          <include name="SearchKafkaKSQLInstances" invocation-numbers="0"/>
+          <include name="RestartKafkaConnectTopic" invocation-numbers="0"/>
+          <include name="Logout"/>
+          <include name="ReadKafkaConnectData" invocation-numbers="0"/>
+          <include name="ForceUpdateKafkaConnect" invocation-numbers="0"/>
+          <include name="ChangeKafkaConnectCustomProperties" invocation-numbers="0"/>
         </methods>
-      </class> <!-- KAFKA.KafkaKSQL -->
+      </class> <!-- KAFKA.KafkaConnects -->
     </classes>
   </test> <!-- RESTAPI options(failed) -->
 </suite> <!-- Failed suite [RESTAPI] -->
