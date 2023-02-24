@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-23T06:33:14Z" name="RESTAPI" finished-at="2023-02-23T06:38:12Z" duration-ms="298258">
+  <suite started-at="2023-02-24T10:36:48Z" name="RESTAPI" finished-at="2023-02-24T10:41:58Z" duration-ms="310548">
     <groups>
     </groups>
-    <test started-at="2023-02-23T06:33:14Z" name="RESTAPI options" finished-at="2023-02-23T06:38:12Z" duration-ms="298258">
-      <class name="KAFKA.KafkaConnectInstances">
-        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:03:14Z" name="Login" finished-at="2023-02-23T12:03:52Z" duration-ms="38573" status="PASS">
+    <test started-at="2023-02-24T10:36:48Z" name="RESTAPI options" finished-at="2023-02-24T10:41:58Z" duration-ms="310548">
+      <class name="KAFKA.KafkaSchRegSubVersion">
+        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:06:48Z" name="Login" finished-at="2023-02-24T16:07:28Z" duration-ms="40010" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ReadKafkaConnectInstanceData(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:03:52Z" name="ReadKafkaConnectInstanceData" finished-at="2023-02-23T12:04:38Z" duration-ms="45750" status="PASS">
+        <test-method signature="SearchKafkaSchRegSubVersion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:07:28Z" name="SearchKafkaSchRegSubVersion" finished-at="2023-02-24T16:08:26Z" duration-ms="58387" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,14 +52,24 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[KAFKA_CONNECTOR]]>
+                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReadKafkaConnectInstanceData -->
-        <test-method signature="SearchKafkaConnectInstances(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:04:38Z" name="SearchKafkaConnectInstances" finished-at="2023-02-23T12:05:23Z" duration-ms="44909" status="PASS">
+        </test-method> <!-- SearchKafkaSchRegSubVersion -->
+        <test-method signature="SearchKafkaSchRegSubVersionEvents(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:08:26Z" name="SearchKafkaSchRegSubVersionEvents" finished-at="2023-02-24T16:09:24Z" duration-ms="58083" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,14 +83,24 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[KAFKA_CONNECTOR]]>
+                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchKafkaConnectInstances -->
-        <test-method signature="SearchKafkaConnectInstanceEvents(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:05:23Z" name="SearchKafkaConnectInstanceEvents" finished-at="2023-02-23T12:06:09Z" duration-ms="45970" status="PASS">
+        </test-method> <!-- SearchKafkaSchRegSubVersionEvents -->
+        <test-method signature="ForceupdateKafkaSchRegSubVersion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:09:24Z" name="ForceupdateKafkaSchRegSubVersion" finished-at="2023-02-24T16:10:22Z" duration-ms="58177" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,14 +114,24 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[KAFKA_CONNECTOR]]>
+                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchKafkaConnectInstanceEvents -->
-        <test-method signature="ForceUpdateKafkaConnectInstance(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:06:09Z" name="ForceUpdateKafkaConnectInstance" finished-at="2023-02-23T12:06:53Z" duration-ms="44063" status="PASS">
+        </test-method> <!-- ForceupdateKafkaSchRegSubVersion -->
+        <test-method signature="ChangeKafkaSchRegSubVersionCustomProperties(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:10:22Z" name="ChangeKafkaSchRegSubVersionCustomProperties" finished-at="2023-02-24T16:11:50Z" duration-ms="87721" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,39 +145,28 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[KAFKA_CONNECTOR]]>
+                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ForceUpdateKafkaConnectInstance -->
-        <test-method signature="ChangeKafkaConnectInstanceCustomProperties(java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:06:53Z" name="ChangeKafkaConnectInstanceCustomProperties" finished-at="2023-02-23T12:08:04Z" duration-ms="71024" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[KAFKA]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New_Cluster]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[KAFKA_CONNECTOR]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeKafkaConnectInstanceCustomProperties -->
-        <test-method signature="Logout()[pri:10, instance:KAFKA.KafkaConnectInstances@3a52dba3]" started-at="2023-02-23T12:08:04Z" name="Logout" finished-at="2023-02-23T12:08:12Z" duration-ms="7935" status="PASS">
+        </test-method> <!-- ChangeKafkaSchRegSubVersionCustomProperties -->
+        <test-method signature="Logout()[pri:6, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:11:50Z" name="Logout" finished-at="2023-02-24T16:11:58Z" duration-ms="8115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
-      </class> <!-- KAFKA.KafkaConnectInstances -->
+      </class> <!-- KAFKA.KafkaSchRegSubVersion -->
     </test> <!-- RESTAPI options -->
   </suite> <!-- RESTAPI -->
 </testng-results>
