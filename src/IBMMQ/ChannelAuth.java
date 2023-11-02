@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -18,6 +19,7 @@ import testrail.TestClass;
 public class ChannelAuth 
 {
 static WebDriver driver;
+
 	
 	@Parameters({"sDriver","sDriverpath","URL","uname","password"})
 	@Test(priority=0)
@@ -27,8 +29,10 @@ static WebDriver driver;
 		if(sDriver.equalsIgnoreCase("webdriver.chrome.driver"))
 		{
 		
-		    System.setProperty(sDriver,sDriverpath);
-		    driver=new ChromeDriver();
+			System.setProperty(sDriver, sDriverpath);
+			ChromeOptions options = new ChromeOptions(); 
+			options.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver(options);
 		}
 		else if(sDriver.equalsIgnoreCase("webdriver.ie.driver"))
 		{

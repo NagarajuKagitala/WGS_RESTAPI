@@ -21,12 +21,12 @@
        
        <methods>
         <include name="Login"/>
-      <!--   <include name="SetChannelAuth"/>
-        <include name="ReadChannelAuthData"/>
+        <include name="SetChannelAuth"/>
+       <!--   <include name="ReadChannelAuthData"/>
         <include name="SearchChannelAuth"/>
         <include name="SearchChannelAuthEvents"/>
         <include name="ForceUpdateChannelAuth"/>
-        <include name="ChangeChannelAuthCustomProperties"/>  -->      
+        <include name="ChangeChannelAuthCustomProperties"/>  -->    
         <include name="Logout"/>
         
         
