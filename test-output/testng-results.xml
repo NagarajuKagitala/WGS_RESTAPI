@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="5" total="8" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-24T10:36:48Z" name="RESTAPI" finished-at="2023-02-24T10:41:58Z" duration-ms="310548">
+  <suite started-at="2023-11-02T12:59:24 IST" name="RESTAPI" finished-at="2023-11-02T12:59:27 IST" duration-ms="2791">
     <groups>
     </groups>
-    <test started-at="2023-02-24T10:36:48Z" name="RESTAPI options" finished-at="2023-02-24T10:41:58Z" duration-ms="310548">
-      <class name="KAFKA.KafkaSchRegSubVersion">
-        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:06:48Z" name="Login" finished-at="2023-02-24T16:07:28Z" duration-ms="40010" status="PASS">
+    <test started-at="2023-11-02T12:59:24 IST" name="RESTAPI options" finished-at="2023-11-02T12:59:27 IST" duration-ms="2791">
+      <class name="IBMMQ.ChannelAuth">
+        <test-method signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:IBMMQ.ChannelAuth@e1de817]" started-at="2023-11-02T12:59:24 IST" name="Login" finished-at="2023-11-02T12:59:27 IST" duration-ms="2719" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -16,7 +16,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Drivers\chromedriver.exe]]>
+                <![CDATA[Drivers\\chromedriver.exe]]>
               </value>
             </param>
             <param index="2">
@@ -35,138 +35,168 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
+            <message>
+              <![CDATA[Unable to establish websocket connection to http://localhost:64498/devtools/browser/341585ae-bd8e-4938-bc2c-39155d499472
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-K4AEKHO', ip: '172.16.31.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:64498/devtools/browser/341585ae-bd8e-4938-bc2c-39155d499472
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-K4AEKHO', ip: '172.16.31.142', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:106)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:265)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at IBMMQ.ChannelAuth.Login(ChannelAuth.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="SearchKafkaSchRegSubVersion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:07:28Z" name="SearchKafkaSchRegSubVersion" finished-at="2023-02-24T16:08:26Z" duration-ms="58387" status="PASS">
+        <test-method signature="SetChannelAuth(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:IBMMQ.ChannelAuth@e1de817]" started-at="2023-11-02T12:59:27 IST" name="SetChannelAuth" finished-at="2023-11-02T12:59:27 IST" duration-ms="2" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[KAFKA]]>
+                <![CDATA[MQM]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[New_Cluster]]>
+                <![CDATA[DESKTOP-K4AEKHO]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
+                <![CDATA[RESTAPIQM]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[sub]]>
+                <![CDATA[channelauth]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[Block User Map]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at IBMMQ.ChannelAuth.SetChannelAuth(ChannelAuth.java:90)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchKafkaSchRegSubVersion -->
-        <test-method signature="SearchKafkaSchRegSubVersionEvents(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:08:26Z" name="SearchKafkaSchRegSubVersionEvents" finished-at="2023-02-24T16:09:24Z" duration-ms="58083" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[KAFKA]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New_Cluster]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[sub]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchKafkaSchRegSubVersionEvents -->
-        <test-method signature="ForceupdateKafkaSchRegSubVersion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:09:24Z" name="ForceupdateKafkaSchRegSubVersion" finished-at="2023-02-24T16:10:22Z" duration-ms="58177" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[KAFKA]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New_Cluster]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[sub]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ForceupdateKafkaSchRegSubVersion -->
-        <test-method signature="ChangeKafkaSchRegSubVersionCustomProperties(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:10:22Z" name="ChangeKafkaSchRegSubVersionCustomProperties" finished-at="2023-02-24T16:11:50Z" duration-ms="87721" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[KAFKA]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New_Cluster]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[KAFKA_SCHEMA_REGISTRY]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[sub]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeKafkaSchRegSubVersionCustomProperties -->
-        <test-method signature="Logout()[pri:6, instance:KAFKA.KafkaSchRegSubVersion@24aed80c]" started-at="2023-02-24T16:11:50Z" name="Logout" finished-at="2023-02-24T16:11:58Z" duration-ms="8115" status="PASS">
+        </test-method> <!-- SetChannelAuth -->
+        <test-method signature="Logout()[pri:7, instance:IBMMQ.ChannelAuth@e1de817]" started-at="2023-11-02T12:59:27 IST" name="Logout" finished-at="2023-11-02T12:59:27 IST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at IBMMQ.ChannelAuth.Logout(ChannelAuth.java:412)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
-      </class> <!-- KAFKA.KafkaSchRegSubVersion -->
+      </class> <!-- IBMMQ.ChannelAuth -->
     </test> <!-- RESTAPI options -->
   </suite> <!-- RESTAPI -->
 </testng-results>
